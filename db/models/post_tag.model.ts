@@ -5,8 +5,8 @@ import {
   AllowNull,
   ForeignKey,
 } from 'sequelize-typescript';
-import { Posts } from './posts_model';
-import { Tags } from './tags_model';
+import { Posts } from './post.model';
+import { Tags } from './tag.model';
 
 @Table({
   tableName: 'post_tags',

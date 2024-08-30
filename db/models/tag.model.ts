@@ -5,8 +5,8 @@ import {
   AllowNull,
   BelongsToMany,
 } from 'sequelize-typescript';
-import { Posts } from './posts_model';
-import { PostTags } from './post_tags_model';
+import { Posts } from './post.model';
+import { PostTags } from './post_tag.model';
 
 @Table({
   tableName: 'tags',
@@ -15,7 +15,13 @@ import { PostTags } from './post_tags_model';
 })
 export class Tags extends Model<Tags> {
   @AllowNull(false)
-  @Column
+  @Column({
+    validate: {
+      unique: true,
+      notEmpty: true,
+      isNull: false,
+    },
+  })
   title: string;
 
   @BelongsToMany(() => Posts, () => PostTags)

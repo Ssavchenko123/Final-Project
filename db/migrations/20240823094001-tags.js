@@ -8,8 +8,10 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       title: {
-        allowNull: false,
         type: Sequelize.STRING,
+        validate: {
+          len: [0, 50],
+        },
       },
       created_at: {
         allowNull: false,

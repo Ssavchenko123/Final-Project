@@ -18,14 +18,16 @@ module.exports = {
         onDelete: 'CASCADE',
       },
       title: {
-        allowNull: false,
         type: Sequelize.STRING,
+        validate: {
+          len: [0, 100],
+        },
       },
       text: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.Text,
       },
-      image: {
+      post_image: {
         type: Sequelize.STRING,
       },
       created_at: {

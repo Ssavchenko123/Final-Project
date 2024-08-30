@@ -7,9 +7,9 @@ import {
   ForeignKey,
   AllowNull,
 } from 'sequelize-typescript';
-import { User } from './users_model';
-import { Tags } from './tags_model';
-import { PostTags } from './post_tags_model';
+import { User } from './user.model';
+import { Tags } from './tag.model';
+import { PostTags } from './post_tag.model';
 
 @Table({
   tableName: 'posts',
@@ -29,10 +29,22 @@ export class Posts extends Model<Posts> {
 
   @AllowNull(false)
   @Column
+  @Column({
+    validate: {
+      notEmpty: true,
+      isNull: false,
+    },
+  })
   title: string;
 
   @AllowNull(false)
   @Column
+  @Column({
+    validate: {
+      notEmpty: true,
+      isNull: false,
+    },
+  })
   text: string;
 
   @AllowNull(false)

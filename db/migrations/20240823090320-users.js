@@ -9,18 +9,23 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
-        allowNull: false,
         type: Sequelize.STRING,
+        validate: {
+          len: [0, 255],
+        },
       },
       password: {
-        allowNull: false,
         type: Sequelize.STRING,
+        validate: {
+          len: [0, 255],
+        },
       },
       email: {
         allowNull: false,
         type: Sequelize.STRING,
+        unique: true,
       },
-      image: {
+      avatar: {
         type: Sequelize.STRING,
       },
       created_at: {
