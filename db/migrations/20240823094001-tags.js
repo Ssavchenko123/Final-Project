@@ -10,7 +10,8 @@ module.exports = {
       title: {
         type: Sequelize.STRING,
         validate: {
-          len: [0, 50],
+          NotEmpty: true,
+          isNull: false,
         },
       },
       created_at: {

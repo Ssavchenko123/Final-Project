@@ -11,13 +11,15 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
         validate: {
-          len: [0, 255],
+          NotEmpty: true,
+          isNull: false,
         },
       },
       password: {
         type: Sequelize.STRING,
         validate: {
-          len: [0, 255],
+          NotEmpty: true,
+          isNull: false,
         },
       },
       email: {

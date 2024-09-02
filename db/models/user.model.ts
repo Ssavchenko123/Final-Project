@@ -12,7 +12,7 @@ import { Posts } from './post.model';
   underscored: true,
   timestamps: true,
 })
-export class User extends Model<User> {
+export class Users extends Model<Users> {
   @AllowNull(false)
   @Column
   name: string;

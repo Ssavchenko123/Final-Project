@@ -7,7 +7,7 @@ import {
   ForeignKey,
   AllowNull,
 } from 'sequelize-typescript';
-import { User } from './user.model';
+import { Users } from './user.model';
 import { Tags } from './tag.model';
 import { PostTags } from './post-tag.model';
 
@@ -17,13 +17,13 @@ import { PostTags } from './post-tag.model';
   timestamps: true,
 })
 export class Posts extends Model<Posts> {
-  @BelongsTo(() => User)
-  owner: User;
+  @BelongsTo(() => Users)
+  owner: Users;
 
   @BelongsToMany(() => Tags, () => PostTags)
   tags: Tags[];
 
-  @ForeignKey(() => User)
+  @ForeignKey(() => Users)
   @Column
   ownerId: number;
 
