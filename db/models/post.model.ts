@@ -9,7 +9,7 @@ import {
 } from 'sequelize-typescript';
 import { User } from './user.model';
 import { Tags } from './tag.model';
-import { PostTags } from './post_tag.model';
+import { PostTags } from './post-tag.model';
 
 @Table({
   tableName: 'posts',
@@ -29,22 +29,10 @@ export class Posts extends Model<Posts> {
 
   @AllowNull(false)
   @Column
-  @Column({
-    validate: {
-      notEmpty: true,
-      isNull: false,
-    },
-  })
   title: string;
 
   @AllowNull(false)
   @Column
-  @Column({
-    validate: {
-      notEmpty: true,
-      isNull: false,
-    },
-  })
   text: string;
 
   @AllowNull(false)

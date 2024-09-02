@@ -14,12 +14,7 @@ import { Posts } from './post.model';
 })
 export class User extends Model<User> {
   @AllowNull(false)
-  @Column({
-    validate: {
-      notEmpty: true,
-      isNull: false,
-    },
-  })
+  @Column
   name: string;
 
   @AllowNull(false)
@@ -29,8 +24,6 @@ export class User extends Model<User> {
     validate: {
       IsEmail: true,
       unique: true,
-      isNull: false,
-      notEmpty: true,
     },
   })
   email: string;
