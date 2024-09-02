@@ -15,7 +15,7 @@ import { PostTags } from './post-tag.model';
 })
 export class Tags extends Model<Tags> {
   @AllowNull(false)
-  @Column
+  @Column({ unique: true })
   title: string;
 
   @BelongsToMany(() => Posts, () => PostTags)
