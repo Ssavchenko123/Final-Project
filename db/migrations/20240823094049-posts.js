@@ -18,6 +18,7 @@ module.exports = {
         onDelete: 'CASCADE',
       },
       title: {
+        allowNull: false,
         type: Sequelize.STRING,
         validate: {
           NotEmpty: true,
@@ -27,6 +28,10 @@ module.exports = {
       text: {
         allowNull: false,
         type: Sequelize.Text,
+        validate: {
+          NotEmpty: true,
+          isNull: false,
+        },
       },
       post_image: {
         type: Sequelize.STRING,

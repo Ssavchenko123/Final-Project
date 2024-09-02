@@ -1,10 +1,4 @@
-import {
-  Column,
-  Table,
-  Model,
-  AllowNull,
-  BelongsTo,
-} from 'sequelize-typescript';
+import { Column, Table, Model, AllowNull, HasMany } from 'sequelize-typescript';
 import { Posts } from './post.model';
 
 @Table({
@@ -32,6 +26,6 @@ export class Users extends Model<Users> {
   @Column
   avatar: string;
 
-  @BelongsTo(() => Posts)
+  @HasMany(() => Posts)
   posts: Posts[];
 }
