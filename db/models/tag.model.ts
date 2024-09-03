@@ -5,6 +5,7 @@ import {
   AllowNull,
   BelongsToMany,
 } from 'sequelize-typescript';
+
 import { Posts } from './post.model';
 import { PostTags } from './post-tag.model';
 

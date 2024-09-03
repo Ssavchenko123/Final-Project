@@ -1,4 +1,5 @@
 import { Column, Table, Model, AllowNull, HasMany } from 'sequelize-typescript';
+
 import { Posts } from './post.model';
 
 @Table({
@@ -9,6 +10,12 @@ import { Posts } from './post.model';
 export class Users extends Model<Users> {
   @AllowNull(false)
   @Column
+  @Column({
+    validate: {
+      notNull: true,
+      unique: true,
+    },
+  })
   name: string;
 
   @AllowNull(false)

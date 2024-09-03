@@ -7,6 +7,7 @@ import {
   ForeignKey,
   AllowNull,
 } from 'sequelize-typescript';
+
 import { Users } from './user.model';
 import { Tags } from './tag.model';
 import { PostTags } from './post-tag.model';
