@@ -8,6 +8,11 @@ import { Posts } from './post.model';
   timestamps: true,
 })
 export class Users extends Model<Users> {
+  @Column({
+    primaryKey: true,
+    autoIncrement: true,
+  })
+  id: number;
   @AllowNull(false)
   @Column
   @Column({
