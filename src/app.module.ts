@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
-import { Users, Posts, PostTags, Tags } from '../db/models/index.js';
+import { Users, Posts, PostTags, Tags } from 'db/models/index';
 
 @Module({
   imports: [
