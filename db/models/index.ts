@@ -1,5 +1,4 @@
-import { Users } from './user.model';
-import { Tags } from './tag.model';
-import { PostTags } from './post-tag.model';
-import { Posts } from './post.model';
-export { Users, Posts, PostTags, Tags };
+export { Users } from './user.model';
+export { Tags } from './tag.model';
+export { PostTags } from './post-tag.model';
+export { Posts } from './post.model';
