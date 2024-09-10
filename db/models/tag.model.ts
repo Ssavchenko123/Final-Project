@@ -15,6 +15,11 @@ import { PostTags } from './post-tag.model';
   timestamps: true,
 })
 export class Tags extends Model<Tags> {
+  @Column({
+    primaryKey: true,
+    autoIncrement: true,
+  })
+  id: number;
   @AllowNull(false)
   @Column({ unique: true })
   title: string;

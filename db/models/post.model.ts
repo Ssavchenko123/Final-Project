@@ -18,6 +18,11 @@ import { PostTags } from './post-tag.model';
   timestamps: true,
 })
 export class Posts extends Model<Posts> {
+  @Column({
+    primaryKey: true,
+    autoIncrement: true,
+  })
+  id: number;
   @BelongsTo(() => Users)
   owner: Users;
 
