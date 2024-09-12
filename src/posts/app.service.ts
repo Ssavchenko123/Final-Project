@@ -18,6 +18,9 @@ export class AppService {
         {
           model: Tags,
           attributes: ['id', 'title'],
+          through: {
+            attributes: [],
+          },
         },
       ],
     });
