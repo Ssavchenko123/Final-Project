@@ -20,6 +20,7 @@ export class Tags extends Model<Tags> {
     autoIncrement: true,
   })
   id: number;
+
   @AllowNull(false)
   @Column({ unique: true })
   title: string;

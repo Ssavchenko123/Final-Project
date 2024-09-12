@@ -13,6 +13,7 @@ export class Users extends Model<Users> {
     autoIncrement: true,
   })
   id: number;
+
   @AllowNull(false)
   @Column
   @Column({

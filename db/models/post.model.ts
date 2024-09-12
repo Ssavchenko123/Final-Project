@@ -23,6 +23,7 @@ export class Posts extends Model<Posts> {
     autoIncrement: true,
   })
   id: number;
+
   @BelongsTo(() => Users)
   owner: Users;
 

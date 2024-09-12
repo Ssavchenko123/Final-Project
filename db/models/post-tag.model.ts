@@ -20,6 +20,7 @@ export class PostTags extends Model<PostTags> {
     autoIncrement: true,
   })
   id: number;
+
   @AllowNull(false)
   @ForeignKey(() => Posts)
   @Column
