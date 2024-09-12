@@ -3,6 +3,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
 import { Users, Posts, PostTags, Tags } from 'db/models';
+import { WebModule } from './posts/web.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { Users, Posts, PostTags, Tags } from 'db/models';
         models: [Users, Posts, PostTags, Tags],
       }),
     }),
+    WebModule,
   ],
 })
-export class AppModule {}
+export class PostModule {}
